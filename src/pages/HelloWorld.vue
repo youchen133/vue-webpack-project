@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 @click="show">{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -27,32 +27,70 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <!-- <Test></Test> -->
   </div>
 </template>
 
 <script>
+// import Test from './test'
+import { mapState } from 'vuex'
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    tt: String
+  },
+  // components: {
+  //   Test
+  // },
+  computed: {
+    ...mapState('test', ['msg'])
+  },
+  created() {
+    console.log('created hello')
+  },
+  mounted() {
+    console.log('mounted hello')
+  },
+  destroyed() {
+    console.log('destoryed hello')
+  },
+  beforeDestroy() {
+    console.log('before destory hello')
+  },
+  methods: {
+    async show() {
+      // let func = () => { }
+      let arr = [1, 2, 4]
+      arr.includes(3)
+      // const s = 123132
+      await Promise.resolve(1)
+      let m = Object.assign({}, { a: 1 })
+      if (m?.a) {
+        console.log(m.a, 8888)
+      }
+      // console.log(klkl)
+      // alert(s)
+      this.$router.push({ name: 'Test' })
+    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+<style lang="scss" scoped>
+.hello {
+  h3 {
+    margin: 40px 0 0;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  a {
+    color: #42b983;
+  }
 }
 </style>

@@ -1,0 +1,4 @@
+@import './tt.css';
+.container {
+  display: flex;
+}
