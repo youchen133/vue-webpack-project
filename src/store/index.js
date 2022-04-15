@@ -4,8 +4,8 @@ import app from './app'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  modules: {
-    app,
-    test: app,
-  },
+	modules: {
+		app,
+		test: app
+	}
 })
