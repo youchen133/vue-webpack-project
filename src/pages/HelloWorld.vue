@@ -114,7 +114,7 @@ export default {
 		console.log('mounted hello')
 	},
 	destroyed() {
-		console.log('destoryed helloq')
+		console.log('destorye1d helloq')
 	},
 	beforeDestroy() {
 		console.log('before destory hello')
