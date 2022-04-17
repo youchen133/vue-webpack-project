@@ -29,7 +29,7 @@ export default {
 	methods: {
 		...mapMutations('app', ['change']),
 		handleClick() {
-			this.change(303111111)
+			this.change(3031111111)
 			console.log(this.$store.state.app)
 			alert(this.a)
 		}
