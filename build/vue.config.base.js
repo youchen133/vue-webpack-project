@@ -2,14 +2,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const webpack = require('webpack')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
     // 生成的 js 文件名称
-    filename: 'index.[hash:8].js',
+    filename: process.env.NODE_ENV == 'production' ? 'app.[chunkhash:8].js' : 'app.[hash:8].js',
     // 生成的 chunk 名称
-    chunkFilename: '[name]/[name].[hash:8].js'
+    chunkFilename: '[name]/[name].[chunkhash:8].js'
   },
   module: {
     rules: [
@@ -20,7 +22,8 @@ module.exports = {
       {
         test: /\.(scss|sass|css)$/,
         use: [
-          'vue-style-loader',
+          MiniCssExtractPlugin.loader,
+          // 'vue-style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -66,11 +69,18 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './public/index.html',
+      title: 'testetsttest'
     }),
     new VueLoaderPlugin(),
     new CopyWebpackPlugin([{
       from: 'public'
-    }])
+    }]),
+    new webpack.DefinePlugin({
+      SOMETHING: JSON.stringify('this is something!')
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css'
+    })
   ]
 }

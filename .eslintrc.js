@@ -4,6 +4,9 @@ module.exports = {
     es6: true,
     node: true
   },
+  globals: {
+    SOMETHING: true
+  },
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@babel/eslint-parser'

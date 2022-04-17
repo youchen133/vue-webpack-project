@@ -128,7 +128,7 @@ export default {
 			await Promise.resolve(1)
 			let m = Object.assign({}, { a: 1 })
 			if (m?.a) {
-				console.log(m.a, 8888)
+				console.log(m.a, 18888)
 			}
 			// console.log(klkl)
 			// alert(s)

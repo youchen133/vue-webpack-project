@@ -10,4 +10,4 @@ new Vue({
 	render: h => h(App)
 }).$mount('#app')
 
-console.log(989898)
+// console.log(SOMETHING, 989898)

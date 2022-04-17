@@ -3,7 +3,7 @@
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex'
-import './test.scss'
+// import './tt.css'
 export default {
 	name: 'test',
 	data() {
@@ -12,7 +12,7 @@ export default {
 		}
 	},
 	created() {
-		console.log('created test')
+		console.log('created test1')
 	},
 	mounted() {
 		console.log('mounted test')
@@ -29,16 +29,11 @@ export default {
 	methods: {
 		...mapMutations('app', ['change']),
 		handleClick() {
-			this.change(30)
+			this.change(30311111)
 			console.log(this.$store.state.app)
 			alert(this.a)
 		}
 	}
 }
 </script>
-<style>
-/* .container {
-  display: flex;
-  align-items: center;
-} */
-</style>
+<style src="./test.scss"></style>
