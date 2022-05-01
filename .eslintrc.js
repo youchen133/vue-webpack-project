@@ -9,6 +9,7 @@ module.exports = {
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
+    sourceType: 'module',
     parser: '@babel/eslint-parser'
   },
   extends: [
