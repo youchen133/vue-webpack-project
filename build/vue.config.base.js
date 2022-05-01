@@ -39,7 +39,8 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: 'img/[name].[ext]?[hash]'
+          esModule: false,
+          name: 'img/[name].[hash].[ext]'
         }
         //图片文件大小小于limit的数值，就会被改写成base64直接填入url里面，
         //不然会输出到dist/img目录下，[name]原文件名，[ext]原后缀，[hash]在url上加上一点哈希值避免缓存

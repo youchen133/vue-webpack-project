@@ -89,6 +89,7 @@
 				</a>
 			</li>
 		</ul>
+		<img src="./1.png" alt="" />
 		<!-- <Test></Test> -->
 	</div>
 </template>
