@@ -8,6 +8,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
+    publicPath: process.env.NODE_ENV === 'production' ? 'https://youchen133.github.io/vue-webpack-project/' : '/',
     // 生成的 js 文件名称
     filename: process.env.NODE_ENV == 'production' ? 'app.[chunkhash:8].js' : 'app.[hash:8].js',
     // 生成的 chunk 名称
