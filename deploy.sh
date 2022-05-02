@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:youchen133/vue-webpack-project.git master:gh-pages
+git push -f git@github.com:youchen133/vue-webpack-project.git branch0.1:gh-pages
 
 cd -
