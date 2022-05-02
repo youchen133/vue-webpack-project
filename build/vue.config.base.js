@@ -79,6 +79,7 @@ module.exports = {
       from: 'public'
     }]),
     new webpack.DefinePlugin({
+      BASE_URL: process.env.NODE_ENV === 'production' ? JSON.stringify('https://youchen133.github.io/vue-webpack-project/') : JSON.stringify('/'),
       SOMETHING: JSON.stringify('this is something!')
     }),
     new MiniCssExtractPlugin({
