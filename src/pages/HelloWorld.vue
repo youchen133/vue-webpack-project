@@ -115,10 +115,10 @@ export default {
 		console.log('mounted hello')
 	},
 	destroyed() {
-		console.log('destorye1d helloq')
+		console.log('destorye1d 1h1elloq')
 	},
 	beforeDestroy() {
-		console.log('before destory hello')
+		console.log('before destory 1heq1ll1o')
 	},
 	methods: {
 		async show() {

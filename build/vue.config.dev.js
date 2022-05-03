@@ -1,5 +1,4 @@
-// const ESLintPlugin = require('eslint-webpack-plugin')
-
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 module.exports = {
   devServer: {
     hot: true,
@@ -17,6 +16,9 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
-  // plugins: [new ESLintPlugin()]
+  },
+  plugins: [
+    new FriendlyErrorsWebpackPlugin()
+  ],
+  stats: 'none'
 }
