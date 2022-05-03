@@ -21,20 +21,6 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.(scss|sass|css)$/,
-        use: [
-          'vue-style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 2
-            }
-          },
-          'postcss-loader',
-          'sass-loader'
-        ]
-      },
-      {
         test: /\.(png|jpe?j|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {

@@ -14,11 +14,25 @@ module.exports = {
         loader: 'eslint-loader',
         enforce: 'pre',
         exclude: /node_modules/
+      },
+      {
+        test: /\.(scss|sass|css)$/,
+        use: [
+          'vue-style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2
+            }
+          },
+          'postcss-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
   plugins: [
     new FriendlyErrorsWebpackPlugin()
   ],
-  stats: 'none'
+  stats: 'none' // 构建日志信息
 }

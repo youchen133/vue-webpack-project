@@ -6,14 +6,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: "babel-loader"
-      },
-      {
         test: /\.(scss|sass|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          // 'vue-style-loader',
           {
             loader: 'css-loader',
             options: {
