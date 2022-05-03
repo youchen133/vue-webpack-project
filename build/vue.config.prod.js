@@ -11,9 +11,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin()
-    // new BundleAnalyzerPlugin({
-    //   analyzerMode: 'static'
-    // })
+    new CleanWebpackPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static'
+    })
   ]
 }

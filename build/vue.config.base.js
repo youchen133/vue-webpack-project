@@ -60,6 +60,12 @@ module.exports = {
       }
     ]
   },
+  // 排除文件引入打包，直接在html中引入
+  externals: {
+    'vue': 'Vue',
+    'vuex': 'Vuex',
+    'vue-router': 'VueRouter'
+  },
   resolve: {
     //引入路径是不用写对应的后缀名
     extensions: ['.js', '.vue', '.json'],
