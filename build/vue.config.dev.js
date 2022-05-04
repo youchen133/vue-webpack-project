@@ -22,7 +22,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 2
+              importLoaders: 2 // 如果css中使用@import语句，就先采用前面两个loader处理@import模块
             }
           },
           'postcss-loader',

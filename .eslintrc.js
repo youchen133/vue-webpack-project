@@ -8,15 +8,15 @@ module.exports = {
   globals: {
     SOMETHING: true
   },
-  parser: 'vue-eslint-parser',
+  parser: 'vue-eslint-parser', // 识别vue文件
   parserOptions: {
     sourceType: 'module',
-    parser: '@babel/eslint-parser'
+    parser: '@babel/eslint-parser' // 配合vue-eslint-parser，解析一些最新的es6语法
   },
   extends: [
     'eslint:recommended',
-    'plugin:vue/essential',
-    'prettier'
+    'plugin:vue/essential'
+    // 'prettier'
   ],
   plugins: [
     'vue',

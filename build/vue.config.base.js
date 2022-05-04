@@ -1,11 +1,11 @@
-const path = require('path');
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: path.resolve(__dirname, '../src/main.js'),
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: process.env.NODE_ENV === 'production' ? 'https://youchen133.github.io/vue-webpack-project/' : '/',
@@ -69,6 +69,7 @@ module.exports = {
     new CopyWebpackPlugin([{
       from: 'public'
     }]),
+    // 定义全局打包可替换变量
     new webpack.DefinePlugin({
       BASE_URL: process.env.NODE_ENV === 'production' ? JSON.stringify('https://youchen133.github.io/vue-webpack-project/') : JSON.stringify('/'),
       SOMETHING: JSON.stringify('this is something!')

@@ -15,6 +15,6 @@ module.exports = {
   plugins: [
     "@babel/plugin-transform-runtime"
     // '@babel/plugin-transform-modules-commonjs',
-    // '@babel/plugin-syntax-dynamic-import'
+    // '@babel/plugin-syntax-dynamic-import' // 支持import语法
   ]
 }
